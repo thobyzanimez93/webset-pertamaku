@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+<title> My Site</title>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text & Background Color Picker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Element Body (Background Utama) */
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #0f172a; /* Warna background default */
+      transition: background-color 0.2s ease;
+      gap: 30px;
+    }
+
+    /* Target Teks */
+    .target-text {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: 2px;
+      color: #38bdf8; /* Warna teks default */
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    /* Kartu Panel Kontrol */
+    .picker-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 25px;
+      width: 320px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .group-title {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .control-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 18px;
+    }
+
+    .control-row:last-child {
+      margin-bottom: 0;
+    }
+
+    input[type="color"] {
+      -webkit-appearance: none;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      background: transparent;
+    }
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+    input[type="color"]::-webkit-color-swatch {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+    }
+
+    .hex-text {
+      color: #f8fafc;
+      font-size: 1.05rem;
+      font-weight: 600;
+      flex-grow: 1;
+      text-align: right;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Teks yang warnanya bisa diubah -->
+  <h1 class="target-text" id="targetText">Kombinasi Warna Keren</h1>
+
+  <!-- Panel Kontrol -->
+  <div class="picker-card">
+    
+    <!-- Kontrol Warna Teks -->
+    <div class="group-title">Warna Teks</div>
+    <div class="control-row">
+      <input type="color" id="textColorInput" value="#38bdf8">
+      <span class="hex-text" id="textHexVal">#38BDF8</span>
+    </div>
+
+    <!-- Kontrol Warna Background -->
+    <div class="group-title">Warna Background</div>
+    <div class="control-row">
+      <input type="color" id="bgColorInput" value="#0f172a">
+      <span class="hex-text" id="bgHexVal">#0F172A</span>
+    </div>
+
+  </div>
+
+  <script>
+    // Ambil elemen dari HTML
+    const textColorInput = document.getElementById('textColorInput');
+    const bgColorInput = document.getElementById('bgColorInput');
+    const targetText = document.getElementById('targetText');
+    const textHexVal = document.getElementById('textHexVal');
+    const bgHexVal = document.getElementById('bgHexVal');
+
+    // 1. Mengubah Warna Teks
+    textColorInput.addEventListener('input', (e) => {
+      const color = e.target.value;
+      targetText.style.color = color;
+      textHexVal.textContent = color.toUpperCase();
+    });
+
+    // 2. Mengubah Warna Background Halaman (document.body)
+    bgColorInput.addEventListener('input', (e) => {
+      const color = e.target.value;
+      document.body.style.backgroundColor = color;
+      bgHexVal.textContent = color.toUpperCase();
+    });
+  </script>
+<center>
+<H2> Hello! </H2>
+<hr/>
+<h3 style="color:red"> BISMILLAH HIRRAHMANIRRAHIIM</h3>
+</center>
+<br/> <br/>
+<br/> <br/>
+<ul>
+<li> A. <a href="https://www.udrop.com/LMQW/AnT_latest.apk">APK Android AnT </a> </li>
+<li> B. <a href="https://www.udrop.com/Ouov/FM.apk">APK Android FM </a></li>
+<li> C. <a href="https://www.udrop.com/O1Bb/Scipher.apk">Scipher</a></li>
+<li> D. <a href="https://www.udrop.com/NrmC/ZWeb_3.2-public.apk">Z_Web</a></li>
+</UL>
+<a href="page2.html">Page 2 </a>
+<br/>
+<a href="page3.html">Page 3 </a>
+<br/>
+<center> <small>
+&copy;2026 joachim and Thoby Zanimez
+</small>
+</center>
+<H4> THOBY ZANIMEZ </h4>
+<p> HABIBIZANIROH</p>
+<center> <b> OKELAH KALO BEGITU LOL </b> </center>
+</body>
+</html>
